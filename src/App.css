@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* 1. The Outer Wrapper (Beige Background) */
+.container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;  
+  background-color: #f5eddc;
+  padding: 20px;
+}
+
+.app-header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #5d5d4a;
+  margin-bottom: 30px;
+}
+
+/* 2. The Quote Card */
+.quote-card {
+  background-color: #fafaf0;
+  border: 1px solid #d3d3b6;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 80px;      
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;   
+  text-align: center;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+/* 3. Daily Wisdom (Top) */
+.card-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin: 0; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-body {
+  flex-grow: 1;     
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  width: 100%;
+}
+
+.quote-text {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+/*4. Button Container */
+.quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  gap: 25px;  
+  width: 100%;
+}
+
+/* 5. Refresh Button */
+.refresh-btn {
+  background-color: #4a4a3a;
+  color: #f5f5dc;
+  border: none;
+  padding: 10px 24px; 
+  font-size: 0.75rem; 
+  text-transform: uppercase;
+  letter-spacing: 1.2px; 
+  cursor: pointer;
+  
+  width: fit-content;     
+  display: inline-block;
+  
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.refresh-btn:hover {
+  opacity: 0.9;
+}
+
+.refresh-btn:active {
+  transform: scale(0.97); 
 }
